@@ -114,7 +114,7 @@ def main():
             time.sleep(1)
     if onscreen("./captures/end continue.png"):
         print("Ending now!")
-        surrender()
+        end()
 
 
 def end():
