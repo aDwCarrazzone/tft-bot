@@ -108,28 +108,19 @@ def main():
     time.sleep(5)
 
     if onscreen("./captures/2-5.png"):
-        while not onscreen("./captures/3-2.png"): # change this if you want to surrender at a different stage
+        while not onscreen("./captures/end continue.png"):
             buy(1)
             click_to("./captures/reroll.png")
             time.sleep(1)
-    if onscreen("./captures/3-2.png"): # (and this)
-        print("Surrendering now!")
+    if onscreen("./captures/end continue.png"):
+        print("Ending now!")
         surrender()
 
 
-def surrender():
-    click_to("./captures/settings.png")
+def end():
+    click_to("./captures/end continue.png")
 
-    while not onscreen("./captures/surrender 1.png"):
-        time.sleep(1)
-    while not onscreen("./captures/surrender 2.png"):
-        click_to("./captures/surrender 1.png")
-
-    time.sleep(1)
-    click_to("./captures/surrender 2.png")
     time.sleep(15)
-
-    time.sleep(1)
 
     while onscreen("./captures/missions ok.png"):
         click_to("./captures/missions ok.png")
