@@ -1,4 +1,5 @@
-# Detergent's TFT Bot @ Nulled.to
+# Detergent's TFT Bot
+# Branch: no-surrender
 
 import pkg_resources
 
