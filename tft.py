@@ -108,17 +108,18 @@ def main():
     time.sleep(5)
 
     if onscreen("./captures/2-5.png"):
-        while not onscreen("./captures/end continue.png"):
+        while not onscreen("./captures/end continue.png") and not onscreen("./captures/end exit.png"):
             buy(1)
             click_to("./captures/reroll.png")
             time.sleep(1)
-    if onscreen("./captures/end continue.png"):
-        print("Ending now!")
-        end()
+
+    print("Ending now!")
+    end()
 
 
 def end():
     click_to("./captures/end continue.png")
+    click_to("./captures/end exit.png")
 
     time.sleep(15)
 
