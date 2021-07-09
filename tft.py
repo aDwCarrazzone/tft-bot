@@ -18,6 +18,7 @@ from printy import inputy
 
 auto.FAILSAFE = False
 
+COUNT = 0
 
 # Start utility methods
 def onscreen(path, precision=0.8):
@@ -163,6 +164,7 @@ def won_match(): #Added wonmatch case
     queue()
     
 def surrender():
+    global COUNT
     click_to("./captures/settings.png")
 
     while not onscreen("./captures/surrender 1.png"):
@@ -180,6 +182,8 @@ def surrender():
 
     time.sleep(5)
     print("Queuing up again!")
+    COUNT = COUNT+1
+    print("Played ", COUNT," matches.")
     queue()
 # End main process
 
